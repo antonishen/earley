@@ -1,5 +1,5 @@
 {
-  "grammar": {
+  "rules": {
     "Det": [
       [
         "the"
