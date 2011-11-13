@@ -16,7 +16,7 @@ class ChartTest < MiniTest::Unit::TestCase
   def test_add_new_spot
     spot_one = Spot.new(0, :NP, ["ProperNoun"])
     spot_two = Spot.new(0, :NP, ["Det", "N"])
-    @chart.add_new_spot(:NP, [["ProperNoun"], ["Det", "N"]], 0)
+    @chart.add_new_spot(0, :NP, [["ProperNoun"], ["Det", "N"]])
 
     assert_equal spot_one, @chart.columns[0][:column][0]
     assert_equal spot_two, @chart.columns[0][:column][1]
