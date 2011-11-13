@@ -24,4 +24,13 @@ class Chart
 
     result
   end
+
+  def get_completions(column_number, rule_name)
+    completions = []
+    @columns[column_number][:column].each do |spot|
+      completions << spot if spot.rule_contents[spot.position]
+    end
+
+    completions
+  end
 end
