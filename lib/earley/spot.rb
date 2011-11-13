@@ -1,6 +1,6 @@
 class Spot
 
-  attr_reader :column, :rule_name, :rule_contents, :position, :complete, :dead
+  attr_accessor :column, :rule_name, :rule_contents, :position, :complete, :dead
 
   def initialize(column, rule_name, rule_contents)
     @column = column

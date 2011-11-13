@@ -19,6 +19,7 @@ class Chart
 
   def add_existing_spot(column_number, spot, rule_to_consume)
     new_spot = spot.clone
+    spot.dead = true
     result = new_spot.consume_rule(rule_to_consume)
     @columns[column_number][:column] << new_spot if result
 
