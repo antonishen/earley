@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class Spot
 
   attr_reader :column, :rule_name, :rule_contents, :position, :complete
