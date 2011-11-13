@@ -18,7 +18,7 @@ class GrammarTest < MiniTest::Unit::TestCase
                }
 
     grammar = Grammar.new(raw_grammar)
-    assert_equal @raw_grammar[:rules], grammar.rules
-    assert_equal @raw_grammar[:terminals], grammar.terminals
+    assert_equal raw_grammar[:rules], grammar.rules
+    assert_equal raw_grammar[:terminals], grammar.terminals
   end
 end
