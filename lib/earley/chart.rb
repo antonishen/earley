@@ -11,13 +11,19 @@ class Chart
   end
 
   def add_new_spot(column_number, rule_name, rules)
+    additions = 0
+
     unless @columns[column_number][:processed_rules].index(rule_name)
       @columns[column_number][:processed_rules] << rule_name
+      additions = rules.length
+
       rules.each do |rule|
         spot = Spot.new(column_number, rule_name, rule)
         @columns[column_number][:column] << spot
       end
     end
+
+    additions
   end
 
   def add_existing_spot(column_number, spot, rule_to_consume)
