@@ -1,0 +1,71 @@
+{
+  "grammar": {
+    "Det": [
+      [
+        "the"
+      ]
+    ],
+    "N": [
+      [
+        "window"
+      ]
+    ],
+    "NP": [
+      [
+        "ProperNoun"
+      ],
+      [
+        "Det",
+        "N"
+      ]
+    ],
+    "PP": [
+      [
+        "Prep",
+        "NP"
+      ]
+    ],
+    "Prep": [
+      [
+        "through"
+      ]
+    ],
+    "ProperNoun": [
+      [
+        "Jen"
+      ],
+      [
+        "Bill"
+      ]
+    ],
+    "S": [
+      [
+        "NP",
+        "VP"
+      ]
+    ],
+    "V": [
+      [
+        "saw"
+      ]
+    ],
+    "VP": [
+      [
+        "V",
+        "NP"
+      ],
+      [
+        "VP",
+        "PP"
+      ]
+    ]
+  },
+  "terminals": [
+    "Jen",
+    "Bill",
+    "saw",
+    "through",
+    "the",
+    "window"
+  ]
+}
