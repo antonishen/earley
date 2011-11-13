@@ -1,0 +1,42 @@
+{
+  "rules": {
+    "S": [
+      ["NP", "VP"]
+    ],
+    "NP": [
+      ["Det", "N"],
+      ["NP", "PP"],
+      ["Papa"]
+    ],
+    "VP": [
+      ["VP", "PP"],
+      ["V", "NP"]
+    ],
+    "PP": [
+      ["P", "NP"]
+    ],
+    "N": [
+      ["caviar"],
+      ["spoon"]
+    ],
+    "V": [
+      ["ate"]
+    ],
+    "P": [
+      ["with"]
+    ],
+    "Det": [
+      ["the"],
+      ["a"]
+    ]
+  },
+  "terminals": [
+    "Papa",
+    "caviar",
+    "spoon",
+    "ate",
+    "with",
+    "the",
+    "a"
+  ]
+}
