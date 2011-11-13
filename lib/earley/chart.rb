@@ -28,7 +28,6 @@ class Chart
 
   def add_existing_spot(column_number, spot, rule_to_consume)
     new_spot = spot.clone
-    spot.dead = true
     result = new_spot.consume_rule(rule_to_consume)
     @columns[column_number][:column] << new_spot if result
 
@@ -38,7 +37,9 @@ class Chart
   def get_completions(column_number, rule_name)
     completions = []
     @columns[column_number][:column].each do |spot|
-      completions << spot if spot.rule_contents[spot.position] == rule_name
+      unless spot.position == spot.rule_contents.length
+        completions << spot if spot.rule_contents[spot.position].to_sym == rule_name
+      end
     end
 
     completions
