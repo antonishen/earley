@@ -12,4 +12,13 @@ class ChartTest < MiniTest::Unit::TestCase
               { :word=>"three", :column=>[] }]
     assert_equal result, @chart.columns
   end
+
+  def test_add_new_spot
+    spot_one = Spot.new(0, :NP, ["ProperNoun"])
+    spot_two = Spot.new(0, :NP, ["Det", "N"])
+    @chart.add_new_spot(:NP, [["ProperNoun"], ["Det", "N"]], 0)
+
+    assert_equal spot_one, @chart.columns[0][:column][0]
+    assert_equal spot_two, @chart.columns[0][:column][1]
+  end
 end
