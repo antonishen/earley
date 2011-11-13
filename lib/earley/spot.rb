@@ -32,6 +32,6 @@ class Spot
       end
     end
 
-    return result
+    result
   end
 end
