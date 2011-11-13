@@ -15,7 +15,7 @@ class Spot
        @rule_name == other.rule_name &&
        @rule_contents == other.rule_contents &&
        @position == other.position)
-        return true
+         return true
     else
       return false
     end
