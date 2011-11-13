@@ -14,10 +14,7 @@ class Spot
   def ==(other)
     if (@column == other.column &&
        @rule_name == other.rule_name &&
-       @rule_contents == other.rule_contents &&
-       @position == other.position,
-       @complete == other.complete,
-       @dead == other.dead)
+       @rule_contents == other.rule_contents)
          return true
     else
       return false

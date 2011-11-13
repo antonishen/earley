@@ -21,4 +21,18 @@ class ChartTest < MiniTest::Unit::TestCase
     assert_equal spot_one, @chart.columns[0][:column][0]
     assert_equal spot_two, @chart.columns[0][:column][1]
   end
+
+  def test_add_existing_spot_success
+    spot_one = Spot.new(0, :NP, ["ProperNoun"])
+    @chart.add_existing_spot(1, spot_one, "ProperNoun")
+
+    assert_equal spot_one, @chart.columns[1][:column][0]
+  end
+
+  def test_add_existing_spot_failure
+    spot_one = Spot.new(0, :NP, ["ProperNoun"])
+    @chart.add_existing_spot(1, spot_one, "test")
+
+    assert_equal nil, @chart.columns[1][:column][0]
+  end
 end
