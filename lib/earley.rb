@@ -1,7 +1,6 @@
 require 'json'
 require_relative 'earley/grammar'
 require_relative 'earley/chart'
-require 'awesome_print'
 
 
 module Earley
