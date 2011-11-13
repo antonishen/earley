@@ -6,7 +6,7 @@ class Chart
 
   def initialize(string)
     @columns = []
-
+    @columns << { word: false, column: [], processed_rules: [] }
     string.split(/ /).each { |word| columns << { word: word, column: [], processed_rules: [] } }
   end
 

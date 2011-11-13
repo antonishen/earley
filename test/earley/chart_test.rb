@@ -7,7 +7,8 @@ class ChartTest < MiniTest::Unit::TestCase
   end
 
   def test_initialize_new_chart
-    result = [{ :word=>"one", :column=>[], :processed_rules=>[] },
+    result = [{ :word=>false, :column=>[], :processed_rules=>[] },
+              { :word=>"one", :column=>[], :processed_rules=>[] },
               { :word=>"two", :column=>[], :processed_rules=>[] },
               { :word=>"three", :column=>[], :processed_rules=>[] }]
     assert_equal result, @chart.columns
