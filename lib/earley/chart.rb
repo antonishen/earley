@@ -7,7 +7,7 @@ class Chart
   def initialize(string)
     @columns = []
 
-    string.split(/ /).each { |word| columns << { word: word, column: [] } }
+    string.split(/ /).each { |word| columns << { word: word, column: [], processed_rules: [] } }
   end
 
   def add_new_spot(column_number, rule_name, rules)
