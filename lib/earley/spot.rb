@@ -1,6 +1,6 @@
 class Spot
 
-  attr_reader :column, :rule_name, :rule_contents, :position, :complete
+  attr_reader :column, :rule_name, :rule_contents, :position, :complete, :dead
 
   def initialize(column, rule_name, rule_contents)
     @column = column
@@ -8,13 +8,16 @@ class Spot
     @rule_contents = rule_contents
     @position = 0
     @complete = false
+    @dead = false
   end
 
   def ==(other)
     if (@column == other.column &&
        @rule_name == other.rule_name &&
        @rule_contents == other.rule_contents &&
-       @position == other.position)
+       @position == other.position,
+       @complete == other.complete,
+       @dead == other.dead)
          return true
     else
       return false
