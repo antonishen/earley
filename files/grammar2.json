@@ -1,0 +1,39 @@
+{
+  "rules": {
+    "NP": [
+      [
+        "ProperNoun"
+      ]
+    ],
+    "ProperNoun": [
+      [
+        "Jen"
+      ],
+      [
+        "Bill"
+      ]
+    ],
+    "S": [
+      [
+        "NP",
+        "VP"
+      ]
+    ],
+    "V": [
+      [
+        "saw"
+      ]
+    ],
+    "VP": [
+      [
+        "V",
+        "NP"
+      ]
+    ]
+  },
+  "terminals": [
+    "Jen",
+    "Bill",
+    "saw"
+  ]
+}
