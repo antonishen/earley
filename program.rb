@@ -8,3 +8,6 @@ puts Earley.check_string("./files/grammar2.json", "Jen saw Bill")
 
 puts Earley.check_string("./files/grammar3.json", "Papa ate the caviar with a spoon")
 
+puts Earley.check_string("./files/grammar4.json", "the strikingly tall and self-possessed student with the green raincoat")
+
+

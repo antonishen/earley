@@ -1,0 +1,48 @@
+{
+  "rules": {
+    "S": [
+      ["the", "Nominal"],
+      ["Nominal"],
+      ["S", "PP"]
+    ],
+    "Nominal": [
+      ["N"],
+      ["Adjs", "N"]
+    ],
+    "Adjs": [
+      ["Adv", "Adjs"],
+      ["Adjs", "and", "Adjs"],
+      ["Adj", "Adjs"],
+      ["Adj"]
+    ],
+    "N": [
+      ["student"],
+      ["raincoat"]
+    ],
+    "Adj": [
+      ["tall"],
+      ["self-possessed"],
+      ["green"]
+    ],
+    "Adv": [
+      ["strikingly"]
+    ],
+    "PP": [
+      ["Prep", "S"]
+    ],
+    "Prep": [
+      ["with"]
+    ]
+  },
+  "terminals": [
+    "and",
+    "the",
+    "student",
+    "raincoat",
+    "tall",
+    "self-possessed",
+    "green",
+    "strikingly",
+    "with"
+  ]
+}
