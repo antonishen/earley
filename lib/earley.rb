@@ -1,6 +1,7 @@
 require 'json'
 require_relative 'earley/grammar'
 require_relative 'earley/chart'
+require "awesome_print"
 
 
 module Earley
@@ -16,8 +17,9 @@ module Earley
     earley_algo(chart, grammar)
 
     result = false
+
     chart.columns[-1][:column].each do |spot|
-      result = true if (spot.rule_name = :S && spot.complete)
+      result = true if (spot.rule_name == :S && spot.complete)
     end
 
     result
